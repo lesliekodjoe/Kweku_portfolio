@@ -14,11 +14,9 @@ export default {
         "primary-500": "#DC2626",
         "secondary-500": "#1D1D1D",
       },
-
-
-      backgroundImage: (theme) => ({
-        "mobile-home": "url('./assets/background-theme.png')",
-      }),
+      backgroundImage: {
+        "about-image": "url('./assets/background-theme.png')",
+      },
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
