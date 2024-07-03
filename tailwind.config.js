@@ -14,6 +14,10 @@ export default {
         "primary-500": "#DC2626",
         "secondary-500": "#1D1D1D",
       },
+      letterSpacing: {
+        'extra-wide': '0.3em', 
+        'super-wide': '0.6em',
+      },
       backgroundImage: {
         "about-image": "url('./assets/background-theme.png')",
       },

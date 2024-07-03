@@ -14,7 +14,7 @@ function Link({page, selectedPage, setSelectedPage, menuFontSize }: Props) {
 
     return (
         <AnchorLink
-            className={`${selectedPage === lowerCasePage ? "text-gray-20" : ""} font-black ${menuFontSize} underline underline-offset-4 transition duration-300 hover:text-gray-20`}
+            className={`${selectedPage === lowerCasePage ? "text-gray-20" : ""} font-bold ${menuFontSize}  underline underline-offset-4 transition duration-300 hover:text-gray-20`}
             href={`#${lowerCasePage}`}
             onClick={() => setSelectedPage(lowerCasePage)}
         >
