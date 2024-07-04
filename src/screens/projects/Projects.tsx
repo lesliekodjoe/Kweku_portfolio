@@ -1,5 +1,4 @@
 import useMediaQuery from '@/hooks/useMediaQuery';
-import React from 'react'
 
 type Props = {
     id: number,

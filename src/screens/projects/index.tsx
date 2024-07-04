@@ -1,4 +1,3 @@
-import React from 'react'
 import HeadText from '@/shared/HeadText'
 import { motion } from 'framer-motion';
 import { ProjectType } from '@/shared/type';

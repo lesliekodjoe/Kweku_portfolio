@@ -1,6 +1,5 @@
 import HeadText from '@/shared/HeadText';
 import { motion } from 'framer-motion';
-import React from 'react'
 
 type Props = {
     setSelectedPage: (value: string) => void;
