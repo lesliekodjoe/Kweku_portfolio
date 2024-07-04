@@ -9,10 +9,10 @@ const About = ({setSelectedPage}: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     
     return (
-        <section id="about" className="relative bg-about-image bg-cover bg-center h-screen w-full">
+        <section id="about" className="relative bg-about-image bg-cover bg-center md:h-full w-full">
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <motion.div 
-            className="relative mx-auto px-12 flex items-center h-screen justify-center"
+            className="relative mx-auto px-12 flex items-center justify-center"
             onViewportEnter={() => setSelectedPage("about")}
             viewport={{ amount: 0.85 }}
             >

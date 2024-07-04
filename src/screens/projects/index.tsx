@@ -32,7 +32,15 @@ const projectTimeline: Array<ProjectType> = [
     role: "Freelance",
 
   },
+
 ];
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { delayChildren: 0.1 , staggerChildren: 0.3 },
+  },
+};
 
 
 type Props = {
@@ -41,9 +49,9 @@ type Props = {
 
 const Project = ({setSelectedPage}: Props) => {
   return (
-    <section id='projects' className='bg-secondary-500 mx-auto h-screen'>
+    <section id='projects' className='bg-secondary-500 mx-auto'>
       <motion.div 
-      className=''
+      className='md:h-full'
       onViewportEnter={() => setSelectedPage("projects")}
       viewport={{ amount: 0.85 }}
       >
@@ -51,20 +59,25 @@ const Project = ({setSelectedPage}: Props) => {
           <HeadText
           backgroundColor='bg-black'
           >Timeline</HeadText>
-          <div className=''>
-            <ul className='w-full '>
-              {projectTimeline.map((item: ProjectType) =>(
-                <Projects
-                  key={item.id}
-                  id={item.id}
-                  date_role={item.date_role}
-                  description={item.description}
-                  role={item.role}
-                />
-              ))}
-            </ul>
-          </div>
-
+       
+          <motion.div 
+          className='w-full '
+          initial = "hidden"
+          whileInView="visible"
+          viewport={{once: true, amount: 0.5}}
+          variants={container}
+          >
+            {projectTimeline.map((item: ProjectType) =>(
+              <Projects
+                key={item.id}
+                id={item.id}
+                date_role={item.date_role}
+                description={item.description}
+                role={item.role}
+              />
+            ))}
+          </motion.div>
+ 
         </div>
       </motion.div>
       
