@@ -16,7 +16,7 @@ function App() {
       />
       <About setSelectedPage={setSelectedPage}/>
       <Project setSelectedPage={setSelectedPage}/>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }

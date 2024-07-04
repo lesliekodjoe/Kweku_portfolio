@@ -48,10 +48,12 @@ const Project = ({setSelectedPage}: Props) => {
       onViewportEnter={() => setSelectedPage("projects")}
       viewport={{ amount: 0.85 }}
       >
-        <div className='border'>
-          <HeadText>Timeline</HeadText>
-          <div className='px-12'>
-            <ul className='w-full border'>
+        <div className=''>
+          <HeadText
+          backgroundColor='bg-black'
+          >Timeline</HeadText>
+          <div className=''>
+            <ul className='w-full '>
               {projectTimeline.map((item: ProjectType) =>(
                 <Projects
                   key={item.id}
