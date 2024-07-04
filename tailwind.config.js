@@ -27,6 +27,7 @@ export default {
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        satoshi: ['Satoshi', 'sans-serif'],
       },
     },
     screens: {

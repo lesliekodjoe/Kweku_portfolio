@@ -3,6 +3,7 @@ import Navbar from "@/screens/navbar";
 import About from '@/screens/about';
 import Project from '@/screens/projects';
 import Footer from '@/screens/footer';
+import Research from '@/screens/research';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       />
       <About setSelectedPage={setSelectedPage}/>
       <Project setSelectedPage={setSelectedPage}/>
+      <Research setSelectedPage={setSelectedPage}/>
       <Footer/>
     </div>
   )
