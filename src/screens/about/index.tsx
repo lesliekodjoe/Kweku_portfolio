@@ -13,7 +13,8 @@ const About = ({setSelectedPage}: Props) => {
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <motion.div 
             className="relative mx-auto px-12 flex items-center h-screen justify-center"
-            onViewportEnter={() => setSelectedPage("About")}
+            onViewportEnter={() => setSelectedPage("about")}
+            viewport={{ amount: 0.85 }}
             >
                 <div className="mt-10 flex flex-col justify-center items-center p-10 gap-16 md:p-0">
                     <motion.div 

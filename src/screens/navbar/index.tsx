@@ -35,13 +35,13 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                                 menuFontSize='text-xs'
                             />
                             <Link 
-                                page="RESEARCH"
+                                page="PROJECTS"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
                                 menuFontSize='text-xs'
                             />
                             <Link 
-                                page="PROJECTS"
+                                page="RESEARCH"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
                                 menuFontSize='text-xs'
@@ -87,13 +87,13 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                             menuFontSize='text-xl'
                         />
                         <Link 
-                            page="RESEARCH" 
+                            page="PROJECTS" 
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             menuFontSize='text-xl'
                         />
                         <Link 
-                            page="PROJECTS" 
+                            page="RESEARCH" 
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             menuFontSize='text-xl'

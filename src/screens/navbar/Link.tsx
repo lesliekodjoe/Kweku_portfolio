@@ -1,5 +1,5 @@
-import React from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 type Props = {
     page: string;
@@ -8,19 +8,21 @@ type Props = {
     menuFontSize: string;
 }
 
-function Link({page, selectedPage, setSelectedPage, menuFontSize }: Props) {
-
-    const lowerCasePage = page.toLowerCase().replace(/ /g, "")
+function Link({ page, selectedPage, setSelectedPage, menuFontSize }: Props) {
+    const lowerCasePage = page.toLowerCase().replace(/ /g, "");
 
     return (
         <AnchorLink
-            className={`${selectedPage === lowerCasePage ? "text-gray-20" : "text-gray-50"} font-bold ${menuFontSize}  underline underline-offset-4 transition duration-300 hover:text-gray-20`}
+            className={`${selectedPage === lowerCasePage ? "text-gray-20" : "text-gray-50"} font-bold ${menuFontSize} underline underline-offset-4 transition duration-300 hover:text-gray-20`}
             href={`#${lowerCasePage}`}
-            onClick={() => setSelectedPage(lowerCasePage)}
+            onClick={() => {
+                console.log(`Link clicked: ${lowerCasePage}`);
+                setSelectedPage(lowerCasePage);
+            }}
         >
             {page}
         </AnchorLink>
     )
 }
 
-export default Link
+export default Link;

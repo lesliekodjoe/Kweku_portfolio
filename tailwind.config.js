@@ -18,6 +18,8 @@ export default {
       letterSpacing: {
         'extra-wide': '0.3em', 
         'super-wide': '0.6em',
+        'header-wide': '0.9em',
+
       },
       backgroundImage: {
         "about-image": "url('./assets/background-theme.png')",

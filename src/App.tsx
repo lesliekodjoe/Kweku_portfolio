@@ -6,7 +6,7 @@ import Footer from '@/screens/footer';
 
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState("about")
+  const [selectedPage, setSelectedPage] = useState("About")
 
   return (
     <div className="app bg-secondary-500">
@@ -16,7 +16,7 @@ function App() {
       />
       <About setSelectedPage={setSelectedPage}/>
       <Project setSelectedPage={setSelectedPage}/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
