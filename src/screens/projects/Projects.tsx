@@ -16,7 +16,6 @@ type Props = {
 const Projects = ({id, date_role, description, role}: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const flexBetween = "flex items-center justify-between";
-  // const flexCenter = "flex flex-col items-center text-center justify-center"
   
   return (
     <motion.div 
