@@ -38,7 +38,7 @@ const projectTimeline: Array<ProjectType> = [
 const container = {
   hidden: {},
   visible: {
-    transition: { delayChildren: 0.1 , staggerChildren: 0.3 },
+    transition: { delayChildren: 0.1 , staggerChildren: 0.25 },
   },
 };
 

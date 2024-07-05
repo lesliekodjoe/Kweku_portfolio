@@ -4,6 +4,7 @@ import About from '@/screens/about';
 import Project from '@/screens/projects';
 import Footer from '@/screens/footer';
 import Research from '@/screens/research';
+import Skill from '@/screens/skills';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <About setSelectedPage={setSelectedPage}/>
       <Project setSelectedPage={setSelectedPage}/>
       <Research setSelectedPage={setSelectedPage}/>
+      <Skill setSelectedPage={setSelectedPage}/>
       <Footer/>
     </div>
   )
