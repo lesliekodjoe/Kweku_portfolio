@@ -5,9 +5,10 @@ type Props = {
     selectedPage: string;
     setSelectedPage: (value: string) => void;
     menuFontSize: string;
+    onClick?: ()=> void;
 }
 
-function Link({ page, selectedPage, setSelectedPage, menuFontSize }: Props) {
+function Link({ page, selectedPage, setSelectedPage, menuFontSize, onClick }: Props) {
     const lowerCasePage = page.toLowerCase().replace(/ /g, "");
 
     return (
@@ -17,6 +18,9 @@ function Link({ page, selectedPage, setSelectedPage, menuFontSize }: Props) {
             onClick={() => {
                 console.log(`Link clicked: ${lowerCasePage}`);
                 setSelectedPage(lowerCasePage);
+                if (onClick) {
+                    onClick(); // Call onClick handler if provided
+                }
             }}
         >
             {page}

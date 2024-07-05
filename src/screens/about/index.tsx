@@ -1,3 +1,4 @@
+import useMediaQuery from "@/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -5,9 +6,10 @@ type Props = {
 }
 
 const About = ({setSelectedPage}: Props) => {
+    const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     
     return (
-        <section id="about" className="relative bg-about-image bg-cover bg-center md:h-full w-full">
+        <section id="about" className="relative bg-about-image bg-cover bg-center md:h-screen w-full">
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <motion.div 
             className="relative mx-auto px-12 flex items-center justify-center"

@@ -41,6 +41,10 @@ function App() {
           opacity: 0,
           duration: 0.5,
         })
+        .from("#home", {
+          opacity: 0,
+          delay: 0.5,
+        })
 
     }, comp)
 
@@ -50,12 +54,13 @@ function App() {
   return (
     <div className="relative app bg-secondary-500" ref={comp}>
       <div 
-      id = 'intro-slider'
-      className='h-screen p-10 font-medium font-satoshi text-black bg-white absolute top-0 left-0 z-50 w-full flex flex-col gap-10 tracking-tight'>
-        <h1 className='text-9xl' id="title-1">AI Enthusiast</h1>
-        <h1 className='text-9xl' id="title-2">Freelance</h1>
-        <h1 className='text-9xl' id="title-3">Software Engineer</h1>
+        id='intro-slider'
+        className='overflow-y-hidden h-screen p-10 font-medium font-satoshi text-black bg-white fixed z-50 w-full flex flex-col gap-10 tracking-tight'>
+        <h1 className='text-9xl' id="title-1">AI</h1>
+        <h1 className='text-9xl' id="title-2">Python Developer</h1>
+        <h1 className='text-9xl' id="title-3">Freelance</h1>
       </div>
+
       <div id="welcome">
         <Navbar
           selectedPage={selectedPage}

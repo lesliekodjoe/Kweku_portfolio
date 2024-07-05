@@ -13,6 +13,22 @@ type Props = {
     setSelectedPage: (value: string) => void
 }
 
+const staggerContainer = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.1 , 
+      staggerChildren: 0.25
+    }
+  }
+};
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+};
+
 const Skill = ({setSelectedPage}: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
@@ -29,44 +45,70 @@ const Skill = ({setSelectedPage}: Props) => {
                     >Experience</HeadText>
                 </div>
 
-                <div className="px-28 my-14 text-white font-black text-justify font-satoshi text-lg leading-loose md:leading-relaxed md:text-5xl">
-                    <p className="">
-                        I'm experienced in Machine Learning, and Natural Language Processing and model 
-                        deployment with Docker containers. Proficient in Python, Java, C++, MySQL, R, JavaScript, 
-                        PHP, HTML, and CSS. My expertise extends to data analysis and visualization (Python, Power BI, Tableau).
-                    </p>
-                </div>
-                <div className={`px-28 grid ${isAboveMediumScreens ? 'grid-cols-3' : 'grid-cols-2 gap-y-10'}`}>
-                    <div className="flex flex-col items-center gap-5 justify-between">
+                <motion.div 
+                className="px-28 my-14 text-white font-black text-justify font-satoshi text-lg leading-loose md:leading-relaxed md:text-5xl"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true, amount: 0.5}}
+                variants={staggerContainer}
+                >
+                    <motion.p variants={fadeInUp} id="text-1" className="">
+                        I'm experienced in Machine Learning, and Natural 
+                    </motion.p>
+                    <motion.p variants={fadeInUp} id="text-2" className="">
+                        Language Processing and model deployment with                    
+                    </motion.p>
+                    <motion.p variants={fadeInUp} id="text-3" className="">
+                        Docker containers. Proficient in Python, Java, C++,
+                    </motion.p>
+                    <motion.p variants={fadeInUp} id="text-4" className="">
+                        MySQL, R, JavaScript, PHP, HTML, and CSS. My  
+                    </motion.p>
+                    <motion.p variants={fadeInUp} id="text-5" className="">
+                        expertise extends to data analysis and visualization
+                    </motion.p>
+                    <motion.p variants={fadeInUp} id="text-6" className="">
+                        (Python, Power BI, Tableau).
+                    </motion.p>
+                           
+                        
+                </motion.div>
+                <motion.div 
+                className={`px-28 grid ${isAboveMediumScreens ? 'grid-cols-3' : 'grid-cols-2 gap-y-10'}`}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true, amount: 0.5}}
+                >
+                    <motion.div variants={fadeInUp} className="flex flex-col items-center gap-5 justify-between">
                         <div className="w-14">
                             <img src={Python} className="w-full h-full"/>
                         </div>
                         <div className="w-14 mt-10">
                             <img src={JS} className="w-full h-full"/>
                         </div>
-                    </div>
-                    <div className="flex flex-col items-center gap-5 justify-between">
+                    </motion.div>
+                    <motion.div variants={fadeInUp} className="flex flex-col items-center gap-5 justify-between">
                         <div className="w-14">
                             <img src={Java} className="w-full h-full"/>
                         </div>
                         <div className="w-40 mt-10">
                             <img src={Pytorch} className="w-full h-full"/>
                         </div>
-                    </div>
-                    <div className="flex flex-col items-center gap-5 justify-between">
+                    </motion.div>
+                    <motion.div variants={fadeInUp} className="flex flex-col items-center gap-5 justify-between">
                         <div className="w-14">
                             <img src={R} className="w-full h-full"/>
                         </div>
                         <div className="w-44 mt-10">
                             <img src={TensorFlow} className="w-full h-full"/>
                         </div>
-                    </div>
-                    <div className="flex flex-col items-center gap-5 justify-between">
+                    </motion.div>
+                    <motion.div variants={fadeInUp} className="flex flex-col items-center gap-5 justify-between">
                         <div className="w-40 mt-10">
                             <img src={MySql} className="w-full h-full"/>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </motion.div>
         </section>
   )

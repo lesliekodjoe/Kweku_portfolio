@@ -15,6 +15,10 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
 
+    const handleMenuToggle = () => {
+        setIsMenuToggled(!isMenuToggled);
+    };
+
     return (
         <nav>
             {/* Desktop View */}
@@ -85,24 +89,28 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             menuFontSize='text-xl'
+                            onClick={handleMenuToggle}
                         />
                         <Link 
                             page="PROJECTS" 
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             menuFontSize='text-xl'
+                            onClick={handleMenuToggle}
                         />
                         <Link 
                             page="RESEARCH" 
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             menuFontSize='text-xl'
+                            onClick={handleMenuToggle}
                         />
                         <Link 
                             page="SKILLS" 
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                             menuFontSize='text-xl'
+                            onClick={handleMenuToggle}
                         />
                     </div>
                 </div>
