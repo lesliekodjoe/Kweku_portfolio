@@ -37,7 +37,7 @@ const Skill = ({setSelectedPage}: Props) => {
                     </p>
                 </div>
                 <div className={`px-28 grid ${isAboveMediumScreens ? 'grid-cols-3' : 'grid-cols-2 gap-y-10'}`}>
-                    <div className="flex flex-col gap-5 justify-between">
+                    <div className="flex flex-col items-center gap-5 justify-between">
                         <div className="w-14">
                             <img src={Python} className="w-full h-full"/>
                         </div>
@@ -45,7 +45,7 @@ const Skill = ({setSelectedPage}: Props) => {
                             <img src={JS} className="w-full h-full"/>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-5 justify-between">
+                    <div className="flex flex-col items-center gap-5 justify-between">
                         <div className="w-14">
                             <img src={Java} className="w-full h-full"/>
                         </div>
@@ -53,7 +53,7 @@ const Skill = ({setSelectedPage}: Props) => {
                             <img src={Pytorch} className="w-full h-full"/>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-5 justify-between">
+                    <div className="flex flex-col items-center gap-5 justify-between">
                         <div className="w-14">
                             <img src={R} className="w-full h-full"/>
                         </div>
@@ -61,7 +61,7 @@ const Skill = ({setSelectedPage}: Props) => {
                             <img src={TensorFlow} className="w-full h-full"/>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-5 justify-between">
+                    <div className="flex flex-col items-center gap-5 justify-between">
                         <div className="w-40 mt-10">
                             <img src={MySql} className="w-full h-full"/>
                         </div>

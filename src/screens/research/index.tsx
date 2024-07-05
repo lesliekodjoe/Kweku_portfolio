@@ -49,20 +49,52 @@ const Research = ({setSelectedPage}: Props) => {
                 {researchDetails.map((item: ResearchType)=> (
                     <div className={`border-b border-gray-500 px-28 ${isAboveMediumScreens ? 'flex ' : ''}`}>
                         <div className='md:w-1/2'>
-                            <RHeadText
-                                title={item.resTitle}
-                            />
-                            <ResTimeLine
-                                date={item.resDate}
-                                year={item.resYear}
-                                location={item.resLocation}
-                            />
+                            <motion.div
+                            initial = "hidden"
+                            whileInView="visible"
+                            viewport={{once: true, amount: 0.5}}
+                            transition={{duration: 0.8}}
+                            variants={{
+                                hidden: {opacity: 0, x: -50},
+                                visible:{opacity: 1, x: 0 }
+                            }}
+                            >
+                                <RHeadText
+                                    title={item.resTitle}
+                                />
+                            </motion.div>
+                            <motion.div
+                            initial = "hidden"
+                            whileInView="visible"
+                            viewport={{once: true, amount: 0.5}}
+                            transition={{delay: 0.5, duration: 0.8}}
+                            variants={{
+                                hidden: {opacity: 0, x: -50},
+                                visible:{opacity: 1, x: 0 }
+                            }}
+                            >
+                                <ResTimeLine
+                                    date={item.resDate}
+                                    year={item.resYear}
+                                    location={item.resLocation}
+                                />
+                            </motion.div>
                         </div>
-                        <div className='flex items-center justify-center md:w-1/2'>
+                        <motion.div 
+                        className='flex items-center justify-center md:w-1/2'
+                        initial = "hidden"
+                        whileInView="visible"
+                        viewport={{once: true, amount: 0.5}}
+                        transition={{delay: 0.85, duration: 0.8}}
+                        variants={{
+                            hidden: {opacity: 0, x: 50},
+                            visible:{opacity: 1, x: 0 }
+                        }}
+                        >
                             <ResLap
                                 description={item.resDescription}
                             />
-                        </div>
+                        </motion.div>
                     </div>
                 ))}
             </div>
