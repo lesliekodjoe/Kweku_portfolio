@@ -56,8 +56,8 @@ function App() {
       <div 
         id='intro-slider'
         className='overflow-y-hidden h-screen p-10 font-medium font-satoshi text-black bg-white fixed z-50 w-full flex flex-col gap-10 tracking-tight'>
-        <h1 className='text-9xl' id="title-1">AI</h1>
-        <h1 className='text-9xl' id="title-2">Python Developer</h1>
+        <h1 className='text-9xl' id="title-1">Language Researcher</h1>
+        <h1 className='text-9xl' id="title-2">Data Analyst</h1>
         <h1 className='text-9xl' id="title-3">Freelance</h1>
       </div>
 
