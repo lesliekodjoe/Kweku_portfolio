@@ -1,4 +1,3 @@
-import React from 'react'
 import Github from "@/assets/Github.svg";
 import LinkedIn from "@/assets/Linked.svg";
 import Twitter from "@/assets/Twitter.svg";
