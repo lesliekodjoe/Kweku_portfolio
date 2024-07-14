@@ -9,6 +9,7 @@ import Skill from '@/screens/skills';
 
 
 function App() {
+  // Main App
   const [selectedPage, setSelectedPage] = useState("About")
   const [isTopPage, setIsTopPage] = useState<boolean>(true)
 
