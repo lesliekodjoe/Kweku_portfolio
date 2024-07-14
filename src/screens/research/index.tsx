@@ -10,19 +10,23 @@ import useMediaQuery from '@/hooks/useMediaQuery';
 
 const researchDetails: Array<ResearchType> = [
     {
-        resTitle: "Effort to Apply NLP in Africa",
-        resDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At tortor praesent ullamcorper gravida libero id malesuada vitae ultrices. Nunc quis suspendisse eget tristique orci odio enim lectus ac... ",
-        resDate: "Aug 21 - Dec 24",
-        resYear: "2022",
+        resId: 1,
+        resTitle: "Africa Deep Fake Speech & ASV Systems",
+        resDescription: "Evaluating Deepfake Speech and ASV Systems on African Accents: ASV systems authenticate users via their speech, while DNN-based voice synthesis can generate deepfake audio that can deceive both humans and ASV systems. This study found that modern ASV systems are less vulnerable to deepfake audio with African accents ",
+        resDate: "Dec 08",
+        resYear: "2023",
         resLocation: "Accra, Ghana",
+        resLink: "https://openreview.net/forum?id=j26ZkJ7w64"
     },
     {
-        resTitle: "Africa Deep Fake Speech & ASV Systems",
-        resDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At tortor praesent ullamcorper gravida libero id malesuada vitae ultrices. Nunc quis suspendisse eget tristique orci odio enim lectus ac... ",
-        resDate: "Aug 21 - Dec 24",
-        resYear: "2022",
+        resId: 2,
+        resTitle: "Effort to Apply NLP in Africa",
+        resDescription: "This paper investigates advancements in ASR, NLP, and TTS technologies for African languages, addressing the continent's implementation challenges. It also proposes a novel concept combining computer vision, NLP, and TTS to assist visually impaired individuals in Ghana.",
+        resDate: "May 15",
+        resYear: "2023",
         resLocation: "Accra, Ghana",
-    }
+        resLink: "https://journal.ashesi.edu.gh/index.php/seed/article/view/63/39"
+    },
 ];
 
 type Props = {
@@ -47,7 +51,9 @@ const Research = ({setSelectedPage}: Props) => {
             <div className='flex flex-col w-full py-16 gap-20'>
 
                 {researchDetails.map((item: ResearchType)=> (
-                    <div className={`border-b border-gray-500 px-28 ${isAboveMediumScreens ? 'flex ' : ''}`}>
+                    <div className={`border-b border-gray-500 px-24 md:px-40 ${isAboveMediumScreens ? 'flex ' : ''}`}
+                        key={item.resId}
+                    >
                         <div className='md:w-1/2'>
                             <motion.div
                             initial = "hidden"
@@ -93,6 +99,7 @@ const Research = ({setSelectedPage}: Props) => {
                         >
                             <ResLap
                                 description={item.resDescription}
+                                link={item.resLink}
                             />
                         </motion.div>
                     </div>

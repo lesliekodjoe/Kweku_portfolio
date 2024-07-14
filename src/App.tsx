@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useRef } from 'react'
+import { useState, useLayoutEffect, useRef, useEffect } from 'react'
 import gsap from "gsap";
 import Navbar from "@/screens/navbar";
 import About from '@/screens/about';
@@ -10,6 +10,22 @@ import Skill from '@/screens/skills';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("About")
+  const [isTopPage, setIsTopPage] = useState<boolean>(true)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopPage(true);
+        setSelectedPage("About")
+      }
+      
+      if (window.scrollY !== 0) {
+        setIsTopPage(false);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("sroll", handleScroll)
+  }, [])
 
   const comp =  useRef(null)
 
@@ -53,16 +69,18 @@ function App() {
 
   return (
     <div className="relative app bg-secondary-500" ref={comp}>
-      <div 
-        id='intro-slider'
-        className='overflow-y-hidden h-screen p-10 font-medium font-satoshi text-black bg-white fixed z-50 w-full flex flex-col gap-10 tracking-tight'>
-        <h1 className='text-9xl' id="title-1">Language Researcher</h1>
-        <h1 className='text-9xl' id="title-2">Data Analyst</h1>
-        <h1 className='text-9xl' id="title-3">Freelance</h1>
-      </div>
+          <div 
+            id='intro-slider'
+            className='overflow-y-hidden h-screen p-10 font-medium font-satoshi text-black bg-white fixed z-50 w-full flex flex-col gap-20 md:gap-10 tracking-tight'>
+            <h1 className='text-4xl md:text-9xl' id="title-1">Language Researcher</h1>
+            <h1 className='text-4xl md:text-9xl' id="title-2">Data Analyst</h1>
+            <h1 className='text-4xl md:text-9xl' id="title-3">Freelance</h1>
+          </div>
 
+      
       <div id="welcome">
         <Navbar
+          isTopPage = {isTopPage}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />

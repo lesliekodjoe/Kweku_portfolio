@@ -6,29 +6,29 @@ import Projects from './Projects';
 const projectTimeline: Array<ProjectType> = [
   {
     id: 1,
-    date_role: "September 2022",
-    description: "I taught Operating Systems at Ashesi University during the Summer.",
-    role: "Freelance",
+    date_role: "Present - 2024",
+    description: "Assisting with the Teaching of Undergraduate Computer Science courses at Ashesi Univers",
+    role: "Teaching Assistant",
 
   },
   {
     id: 2,
-    date_role: "September 2022",
-    description: "I taught Operating Systems at Ashesi University during the Summer.",
-    role: "Freelance",
+    date_role: "February 2024",
+    description: "Conducting Research to see how prosodic features can guide a robot in an environment",
+    role: "Researcher",
 
   },
   {
     id: 3,
-    date_role: "September 2022",
-    description: "I taught Operating Systems at Ashesi University during the Summer.",
-    role: "Freelance",
+    date_role: "September 2023",
+    description: "Attended the DLI Conference in Ghana, where I presented a poster and published a paper.",
+    role: "Participant",
 
   },
   {
     id: 4,
-    date_role: "September 2022",
-    description: "I taught Operating Systems at Ashesi University during the Summer.",
+    date_role: "February 2023",
+    description: "Worked on the integration of LLMS technologies to enhance legal research at Diligence AI",
     role: "Freelance",
 
   },

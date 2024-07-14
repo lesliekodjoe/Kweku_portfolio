@@ -19,12 +19,12 @@ const Projects = ({id, date_role, description, role}: Props) => {
   
   return (
     <motion.div 
-    className={`text-white border-b border-gray-500 px-28 py-6 md:flex ${id === 1 ? 'bg-primary-500':''} ${isAboveMediumScreens ? flexBetween: ' '}`}
+    className={`text-white border-b border-gray-500 px-24 md:px-40 py-5 md:flex md:gap-28 ${id === 1 ? 'bg-primary-500':''} ${isAboveMediumScreens ? flexBetween: ' '}`}
     variants={childVariant}
     >
-      <p className=''>{date_role}</p>
-      <p className='my-6 md:w-2/4'>{description}</p>
-      <p>{role}</p>
+      <p className='md:w-1/5'>{date_role}</p>
+      <p className='my-6 md:w-3/5'>{description}</p>
+      <p className='md:w-1/5'>{role}</p>
     </motion.div>
    
   )

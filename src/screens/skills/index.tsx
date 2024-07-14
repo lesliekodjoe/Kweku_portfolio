@@ -46,7 +46,7 @@ const Skill = ({setSelectedPage}: Props) => {
                 </div>
 
                 <motion.div 
-                className="px-28 my-14 text-white font-black text-justify font-satoshi text-lg leading-loose md:leading-relaxed md:text-5xl"
+                className="px-24 md:px-40 my-14 text-white font-black text-justify font-satoshi text-lg leading-loose md:leading-relaxed md:text-5xl"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true, amount: 0.5}}
