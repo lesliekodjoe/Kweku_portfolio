@@ -46,31 +46,19 @@ const Skill = ({setSelectedPage}: Props) => {
                 </div>
 
                 <motion.div 
-                className="px-24 md:px-40 my-14 text-white font-black text-justify font-satoshi text-xl sm:text-3xl leading-loose md:leading-relaxed md:text-5xl"
+                className="px-24 md:px-40 my-14 text-white font-black text-justify font-satoshi text-xl flex flex-wrap leading-loose md:leading-relaxed md:text-5xl"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true, amount: 0.5}}
                 variants={staggerContainer}
                 >
-                    <motion.p variants={fadeInUp} id="text-1" className="">
-                        I'm experienced in Machine Learning, and Natural 
-                    </motion.p>
-                    <motion.p variants={fadeInUp} id="text-2" className="">
-                        Language Processing and model deployment with                    
-                    </motion.p>
-                    <motion.p variants={fadeInUp} id="text-3" className="">
-                        Docker containers. Proficient in Python, Java, C++,
-                    </motion.p>
-                    <motion.p variants={fadeInUp} id="text-4" className="">
-                        MySQL, R, JavaScript, PHP, HTML, and CSS. My  
-                    </motion.p>
-                    <motion.p variants={fadeInUp} id="text-5" className="">
-                        expertise extends to data analysis and visualization
-                    </motion.p>
-                    <motion.p variants={fadeInUp} id="text-6" className="">
-                        (Python, Power BI, Tableau).
-                    </motion.p>
-                           
+                    <p>
+                        <motion.span variants={fadeInUp} id="text-1">I'm experienced in Machine Learning, and Natural Language </motion.span>
+                        <motion.span variants={fadeInUp} id="text-2">Processing and model deployment with Docker containers. </motion.span> 
+                        <motion.span variants={fadeInUp} id="text-3">Proficient in Python, Java, C++, MySQL, R, JavaScript, PHP, HTML, and CSS. My </motion.span>
+                        <motion.span variants={fadeInUp} id="text-4">expertise extends to data analysis and visualization (Python, Power BI, Tableau).</motion.span>
+                       
+                    </p>
                         
                 </motion.div>
                 <motion.div 
