@@ -7,7 +7,7 @@ const projectTimeline: Array<ProjectType> = [
   {
     id: 1,
     date_role: "Present - 2024",
-    description: "Assisting with the Teaching of Undergraduate Computer Science courses at Ashesi Univers",
+    description: "Assisting with the Teaching of Undergraduate Computer Science courses at Ashesi University",
     role: "Teaching Assistant",
 
   },
