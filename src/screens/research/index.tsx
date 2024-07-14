@@ -12,7 +12,7 @@ const researchDetails: Array<ResearchType> = [
     {
         resId: 1,
         resTitle: "Africa Deep Fake Speech & ASV Systems",
-        resDescription: "Evaluating Deepfake Speech and ASV Systems on African Accents: ASV systems authenticate users via their speech, while DNN-based voice synthesis can generate deepfake audio that can deceive both humans and ASV systems. This study found that modern ASV systems are less vulnerable to deepfake audio with African accents ",
+        resDescription: "Evaluating Deepfake Speech and ASV Systems on African Accents: ASV systems authenticate users via their speech, while DNN-based voice...",
         resDate: "Dec 08",
         resYear: "2023",
         resLocation: "Accra, Ghana",
@@ -21,7 +21,7 @@ const researchDetails: Array<ResearchType> = [
     {
         resId: 2,
         resTitle: "Effort to Apply NLP in Africa",
-        resDescription: "This paper investigates advancements in ASR, NLP, and TTS technologies for African languages, addressing the continent's implementation challenges. It also proposes a novel concept combining computer vision, NLP, and TTS to assist visually impaired individuals in Ghana.",
+        resDescription: "This paper investigates advancements in ASR, NLP, and TTS technologies for African languages, addressing the continent's implementation...",
         resDate: "May 15",
         resYear: "2023",
         resLocation: "Accra, Ghana",
@@ -48,7 +48,7 @@ const Research = ({setSelectedPage}: Props) => {
                 >Research</HeadText>
             </div>
 
-            <div className='flex flex-col w-full py-16 gap-20'>
+            <div className='flex flex-col w-full py-16 gap-10'>
 
                 {researchDetails.map((item: ResearchType)=> (
                     <div className={`border-b border-gray-500 px-24 md:px-40 ${isAboveMediumScreens ? 'flex ' : ''}`}
